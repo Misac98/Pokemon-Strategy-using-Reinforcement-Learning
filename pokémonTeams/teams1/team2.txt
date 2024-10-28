@@ -1,0 +1,45 @@
+Smeargle @ Miracle Berry  
+Ability: none  
+- Spore  
+- Agility  
+- Baton Pass  
+- Spikes  
+
+Scizor @ Miracle Berry  
+Ability: none  
+IVs: 26 Atk / 26 Def  
+- Hidden Power [Bug]  
+- Agility  
+- Baton Pass  
+- Swords Dance  
+
+Snorlax @ Leftovers  
+Ability: none  
+- Double-Edge  
+- Earthquake  
+- Belly Drum  
+- Protect  
+
+Marowak @ Thick Club  
+Ability: none  
+IVs: 26 Atk / 26 Def  
+- Earthquake  
+- Rock Slide  
+- Fire Blast  
+- Hidden Power [Bug]  
+
+Jolteon @ Leftovers  
+Ability: none  
+IVs: 14 HP / 28 Atk / 26 Def  
+- Agility  
+- Thunder  
+- Hidden Power [Water]  
+- Baton Pass  
+
+Machamp @ Miracle Berry  
+Ability: none  
+IVs: 26 Atk / 26 Def  
+- Cross Chop  
+- Rock Slide  
+- Meditate  
+- Hidden Power [Bug]  

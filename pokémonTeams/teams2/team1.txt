@@ -1,0 +1,43 @@
+Wartortle  
+Ability: No Ability  
+EVs: 252 HP / 252 Atk / 252 Def / 252 SpA / 252 SpD / 252 Spe  
+Serious Nature  
+- Surf  
+- Ice Beam  
+- Seismic Toss  
+- Body Slam  
+
+Haunter  
+Ability: No Ability  
+- Psychic  
+- Thunderbolt  
+- Hypnosis  
+- Confuse Ray  
+
+Poliwhirl  
+Ability: No Ability  
+- Psychic  
+- Earthquake  
+- Hypnosis  
+- Surf  
+
+Dragonair  
+Ability: No Ability  
+- Ice Beam  
+- Thunderbolt  
+- Hyper Beam  
+- Fire Blast  
+
+Scyther  
+Ability: No Ability  
+- Slash  
+- Agility  
+- Swords Dance  
+- Wing Attack  
+
+Charmander  
+Ability: No Ability  
+- Flamethrower  
+- Reflect  
+- Toxic  
+- Dragon Rage  
