@@ -2,6 +2,13 @@ import numpy as np
 from poke_env.teambuilder import Teambuilder
 import time
 import requests
+import os
+from poke_env.player.player import Player
+from poke_env.environment.abstract_battle import AbstractBattle
+import cProfile, pstats
+import asyncio
+from poke_env import RandomPlayer
+
 # import matplotlib
 
 
@@ -12,9 +19,6 @@ class RandomTeamFromPool(Teambuilder):
     def yield_team(self):
         return np.random.choice(self.teams)
     
-
-import os
-
 relative_path = "pokémonTeams/teams1"
 
 teamsPaths = []
@@ -28,16 +32,6 @@ for teamPath in teamsPaths:
         teams.append(team.read())
 
 custom_builder = RandomTeamFromPool(teams)
-
-import subprocess
-import json
-
-def run_javascript(file_path, *args):
-    result = subprocess.run(["node", file_path] + list(args), capture_output=True, text=True, check=True)
-    return json.loads(result.stdout)
-
-from poke_env.player.player import Player
-from poke_env.environment.abstract_battle import AbstractBattle
 
 # Define a custom player by subclassing Player
 class CustomPlayer(Player):
@@ -87,7 +81,6 @@ class OptimizedPlayer(Player):
         else:
             return self.choose_random_move(battle)
 
-from poke_env import RandomPlayer
 
 generation = "gen2ou"
 
@@ -122,7 +115,7 @@ async def plot_battle_times():
     x = range(1, 100, 5)
 
     for i in x:
-        times.append(time_n_battles(i))
+        times.append(await time_n_battles(i))
     
     # Plot the times
 
@@ -136,18 +129,15 @@ async def run_battle():
     print(f"Battles won: {optimized_player.n_won_battles}")
     print(f"Win rate: {optimized_player.win_rate}")
 
-import cProfile, pstats
-import asyncio
-
 async def main():
     profiler = cProfile.Profile()
     profiler.enable()
     await run_battle()
+    # await plot_battle_times()
     profiler.disable()
 
     stats = pstats.Stats(profiler)
-    # stats = stats.strip_dirs()  # Remove the path from filenames
-    stats.sort_stats('cumulative')  # Sort by cumulative time
+    stats.sort_stats('cumulative')
 
     # Print the stats to a file
     with open('results/profile_output.txt', 'w') as f:
