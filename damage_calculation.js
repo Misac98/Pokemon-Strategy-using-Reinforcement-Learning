@@ -1,10 +1,10 @@
-const { Generations, Pokemon, Move, calculate, Field} = require('@smogon/calc');
+const { Generations, Pokemon, Move, calculate, Field } = require('@smogon/calc');
 
-const gen =  Generations.get(2);
+const gen = Generations.get(2);
 
 function calculateDamage(attackerName, attackerLevel, attackerItem, attackerStatus, attackerAbility, attackerBoosts,
-                         defenderName, defenderLevel, defenderItem, defenderStatus, defenderAbility, defenderBoosts,
-                         moveName) {
+    defenderName, defenderLevel, defenderItem, defenderStatus, defenderAbility, defenderBoosts,
+    moveName) {
     const attacker = new Pokemon(gen, attackerName, {
         /*
         evs: {hp: 85, atk: 85, def: 85, spa: 85, spd: 85, spe: 85},
@@ -60,7 +60,7 @@ function calculateDamage(attackerName, attackerLevel, attackerItem, attackerStat
 
 const args = process.argv.slice(2);
 console.log(JSON.stringify(calculateDamage(args[0], args[1], args[2], args[3], args[4], args[5],
-    args[6], args[7], args[8],args[9], args[10], args[11], args[12])));
+    args[6], args[7], args[8], args[9], args[10], args[11], args[12])));
 
 
 /*

@@ -1,0 +1,5 @@
+{
+    "damage_calculator_server": {
+        "port": 3000
+    }
+}
